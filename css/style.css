@@ -272,7 +272,7 @@ svg {
   background-color: var(--color-white);
   border-radius: 2px;
   padding-bottom: 30px;
-  box-shadow: 0 2px var(--color-white-gray);
+  box-shadow: 0 2px 3px var(--color-white-gray);
 }
 
 .team-item .member {
