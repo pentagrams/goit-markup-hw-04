@@ -90,8 +90,10 @@ svg {
 .link .link__active {
   color: var(--color-blue);
 }
-.link a:hover {
+.link a:hover,
+.link a:focus {
   color: var(--color-blue);
+  outline: none;
 }
 
 .link:not(:last-child) {
@@ -118,8 +120,11 @@ svg {
   fill: var(--color-gray);
 }
 
-.header-contacts li a:hover svg {
+.header-contacts li a:hover svg,
+.header-contacts li a:focus svg,
+.header-contacts li a svg:focus {
   fill: var(--color-blue);
+  outline: none;
 }
 
 /*header*/
@@ -155,6 +160,9 @@ svg {
   border: 0px;
   border-radius: 4px;
   margin: 30px auto 0;
+}
+.button:focus {
+  outline: none;
 }
 
 /*hero*/
@@ -305,18 +313,32 @@ svg {
   padding-right: 32px;
   margin: 0px;
 }
-
 .team-item ul li {
   border-radius: 50%;
-  padding: 12px;
 }
 
-.team-item ul li:hover {
+.team-item ul li a {
+  display: block;
+  padding: 12px;
+  border-radius: 50%;
+}
+.team-item ul li:focus,
+.team-item ul li:focus a svg,
+.team-item ul li a:hover,
+.team-item ul li a:focus svg,
+.team-item ul li a svg:focus,
+.team-item ul li a:focus,
+.team-item ul li a:hover svg,
+.team-item ul li a:focus svg {
   background-color: var(--color-blue);
-}
-.team-item ul li:hover svg {
   fill: var(--color-white);
+  outline: none;
 }
+.team-item ul li svg:focus {
+  fill: var(--color-white);
+  outline: none;
+}
+
 .team-item ul li:not(:last-child) {
   margin-right: 10px;
 }
@@ -339,21 +361,29 @@ svg {
   margin-top: 50px;
 }
 
-.customers-list li {
+.customers-list li a {
+  border: 1px solid var(--color-white-gray);
+  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 170px;
   height: 90px;
-  border: 1px solid var(--color-white-gray);
-  border-radius: 4px;
 }
-.customers-list li:hover {
+
+.customers-list li:focus,
+.customers-list li:hover svg,
+.customers-list li a svg:focus,
+.customers-list li a:focus svg {
+  fill: var(--color-blue);
+  outline: none;
+}
+
+.customers-list li a:focus,
+.customers-list li a:hover {
   border: 1px solid var(--color-blue);
   fill: var(--color-blue);
-}
-.customers-list li:hover svg {
-  fill: var(--color-blue);
+  outline: none;
 }
 
 .customers-list li:not(:last-child) {
@@ -419,16 +449,25 @@ svg {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer__social ul li:hover {
+.footer__social ul li:hover,
+.footer__social ul li:focus,
+.footer__social ul li a:focus,
+.footer__social ul li a:focus svg,
+.footer__social ul li:focus a svg,
+.footer__social ul li:hover svg,
+.footer__social ul li:focus svg {
   background-color: var(--color-blue);
+  fill: var(--color-white);
+  outline: none;
 }
+.footer__social ul li svg:focus {
+  outline: none;
+}
+
 .footer__social ul li svg {
   fill: var(--color-white);
 }
 
-.footer__social ul li:hover svg {
-  fill: var(--color-white);
-}
 .footer__social ul li:not(:last-child) {
   margin-right: 10px;
 }
